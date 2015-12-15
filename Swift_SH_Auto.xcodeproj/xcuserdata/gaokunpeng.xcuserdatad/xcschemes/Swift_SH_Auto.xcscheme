@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E0C3AD91C1FBFFC00B75D43"
+               BuildableName = "Swift_SH_Auto.app"
+               BlueprintName = "Swift_SH_Auto"
+               ReferencedContainer = "container:Swift_SH_Auto.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E0C3AED1C1FBFFC00B75D43"
+               BuildableName = "Swift_SH_AutoTests.xctest"
+               BlueprintName = "Swift_SH_AutoTests"
+               ReferencedContainer = "container:Swift_SH_Auto.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E0C3AF81C1FBFFC00B75D43"
+               BuildableName = "Swift_SH_AutoUITests.xctest"
+               BlueprintName = "Swift_SH_AutoUITests"
+               ReferencedContainer = "container:Swift_SH_Auto.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4E0C3AD91C1FBFFC00B75D43"
+            BuildableName = "Swift_SH_Auto.app"
+            BlueprintName = "Swift_SH_Auto"
+            ReferencedContainer = "container:Swift_SH_Auto.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4E0C3AD91C1FBFFC00B75D43"
+            BuildableName = "Swift_SH_Auto.app"
+            BlueprintName = "Swift_SH_Auto"
+            ReferencedContainer = "container:Swift_SH_Auto.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4E0C3AD91C1FBFFC00B75D43"
+            BuildableName = "Swift_SH_Auto.app"
+            BlueprintName = "Swift_SH_Auto"
+            ReferencedContainer = "container:Swift_SH_Auto.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
