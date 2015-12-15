@@ -10,6 +10,41 @@ import UIKit
 
 class InfoCell: UITableViewCell {
 
+    
+    @IBOutlet weak var infoImageView: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBOutlet weak var commentLabel: UILabel!
+    
+    
+    //显示数据
+    func config(model: InfoModel){
+        
+        //图片
+        self.infoImageView.kf_setImageWithURL(NSURL(string: model.header_img_url!)!)
+        //标题
+        self.titleLabel.text = model.title
+        self.titleLabel.numberOfLines = 2
+        
+        //时间
+        let array = model.createTime?.componentsSeparatedByString(" ")
+        self.timeLabel.text = array?.first
+        
+        //评论数
+        if model.commentCount != nil {
+            self.commentLabel.text = "\(model.commentCount)"
+        }else{
+            self.commentLabel.text = "0"
+        }
+        
+        
+        
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
