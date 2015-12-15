@@ -888,6 +888,8 @@
 		4E0C41E81C1FC26200B75D43 /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C41E71C1FC26200B75D43 /* ForumViewController.swift */; };
 		4E0C41EA1C1FC26F00B75D43 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C41E91C1FC26F00B75D43 /* MineViewController.swift */; };
 		4E0C41EC1C1FC29400B75D43 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C41EB1C1FC29400B75D43 /* MainTabBarController.swift */; };
+		4E0C41EF1C1FC60700B75D43 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C41ED1C1FC60700B75D43 /* InfoCell.swift */; };
+		4E0C41F01C1FC60700B75D43 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C41EE1C1FC60700B75D43 /* InfoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1795,6 +1797,8 @@
 		4E0C41E71C1FC26200B75D43 /* ForumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
 		4E0C41E91C1FC26F00B75D43 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		4E0C41EB1C1FC29400B75D43 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4E0C41ED1C1FC60700B75D43 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		4E0C41EE1C1FC60700B75D43 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1925,6 +1929,8 @@
 		4E0C3B121C1FC1C000B75D43 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4E0C41ED1C1FC60700B75D43 /* InfoCell.swift */,
+				4E0C41EE1C1FC60700B75D43 /* InfoCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -3191,6 +3197,7 @@
 				4E0C41571C1FC22200B75D43 /* saler_drive.png in Resources */,
 				4E0C3F221C1FC22200B75D43 /* cityCellDown@2x.png in Resources */,
 				4E0C3EEB1C1FC22200B75D43 /* biyadi.jpg in Resources */,
+				4E0C41F01C1FC60700B75D43 /* InfoCell.xib in Resources */,
 				4E0C3EE31C1FC22200B75D43 /* bid_progress_1.png in Resources */,
 				4E0C3F2F1C1FC22200B75D43 /* collect_delete_pressed@2x.png in Resources */,
 				4E0C3FAD1C1FC22200B75D43 /* FA_70.gif in Resources */,
@@ -3850,6 +3857,7 @@
 				4E0C41E61C1FC25600B75D43 /* IndulgenceViewController.swift in Sources */,
 				4E0C41E21C1FC23E00B75D43 /* InformationViewController.swift in Sources */,
 				4E0C41E81C1FC26200B75D43 /* ForumViewController.swift in Sources */,
+				4E0C41EF1C1FC60700B75D43 /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
