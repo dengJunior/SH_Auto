@@ -34,11 +34,8 @@ class InfoCell: UITableViewCell {
         self.timeLabel.text = array?.first
         
         //评论数
-        if model.commentCount != nil {
-            self.commentLabel.text = "\(model.commentCount)"
-        }else{
-            self.commentLabel.text = "0"
-        }
+        self.commentLabel.text = "\(model.commentCount)"
+        
         
         
         

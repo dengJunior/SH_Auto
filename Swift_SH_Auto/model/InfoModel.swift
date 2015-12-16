@@ -14,7 +14,7 @@ class InfoModel: NSObject {
     var createTime: String?
     var title: String?
     var header_img_url: String?
-    var commentCount: NSNumber?
+    var commentCount: NSNumber = 0
     var brief: String?
     
 
