@@ -22,7 +22,7 @@ public let kInfoListMoreUrl = "http://mobile.auto.sohu.com/mcms/external/getNews
 public let kInfoAdUrl = "http://mobile.auto.sohu.com/mcms/external/getFocusNews.at?newsType=%@"
 
 //详情
-public let kDetailUrl = "http://mobile.auto.sohu.com/mcms/external/queryNewsDetail.at?articleId=%ld&storeType=1"
+public let kDetailUrl = "http://mobile.auto.sohu.com/mcms/external/queryNewsDetail.at?articleId=%@&storeType=1"
 
 
 

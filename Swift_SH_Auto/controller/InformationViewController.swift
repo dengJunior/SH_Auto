@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InformationViewController: BaseViewController ,UITableViewDelegate, UITableViewDataSource, MyDownloaderDelegate{
+class InformationViewController: BaseViewController ,UITableViewDelegate, UITableViewDataSource, MyDownloaderDelegate ,InfoHeaderViewDelegte{
     
     
     //类型
@@ -26,6 +26,11 @@ class InformationViewController: BaseViewController ,UITableViewDelegate, UITabl
     //表格
     var tbView: UITableView?
     
+    //标题视图
+    var infoTitleView: InfoHeadView?
+    
+    var titleStr: String?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +38,13 @@ class InformationViewController: BaseViewController ,UITableViewDelegate, UITabl
         // Do any additional setup after loading the view.
         
         
+        //标题
+        self.createTitleView()
+        
         //创建表格
         self.createTableView()
+        
+        
         
     }
     
@@ -46,7 +56,7 @@ class InformationViewController: BaseViewController ,UITableViewDelegate, UITabl
         self.automaticallyAdjustsScrollViewInsets = false
         
     
-        self.tbView = UITableView(frame: CGRectMake(0, 64+40, kScreenW, kScreenH-64-40-49), style: UITableViewStyle.Plain)
+        self.tbView = UITableView(frame: CGRectMake(0, 64+30, kScreenW, kScreenH-64-30-49), style: UITableViewStyle.Plain)
         self.tbView?.delegate = self
         self.tbView?.dataSource = self
         self.view.addSubview(self.tbView!)
@@ -106,7 +116,29 @@ class InformationViewController: BaseViewController ,UITableViewDelegate, UITabl
     }
     
     
+    //显示标题
+    func createTitleView() {
+        
+        self.infoTitleView = InfoHeadView(frame: CGRectMake(0, 64, 375, 30))
+        self.infoTitleView!.titleArray = ["最新","新车","导购","评测","行情","视频","车迷"]
+        self.infoTitleView!.titleDict = ["最新":"11","新车":"4","导购":"3","评测":"1","行情":"2","视频":"13","车迷":"14"]
+        //设置代理
+        self.infoTitleView!.delegate = self;
+        
+        
+        //显示标题
+        self.infoTitleView?.configTitle()
+        //选中标题
+        self.titleStr = self.infoTitleView!.titleArray?.first;
+        
+        self.view.addSubview(self.infoTitleView!)
+    }
     
+    
+    //下载广告数据
+    func downloadAdData() {
+        
+    }
     
 
     override func didReceiveMemoryWarning() {
@@ -126,6 +158,30 @@ class InformationViewController: BaseViewController ,UITableViewDelegate, UITabl
     */
 
 }
+
+extension InformationViewController {
+    
+    func didSelectType(type: String, titleStr: String) {
+        
+        self.lastId = ""
+        
+        self.newsType = type
+        
+        self.titleStr = titleStr
+        
+        //下载数据
+        self.tbView?.tableHeaderView = nil
+        
+        self.downloadListData()
+        
+        self.downloadAdData()
+        
+        self.tbView?.contentOffset = CGPointZero
+        
+        
+    }
+}
+
 
 extension InformationViewController {
     
@@ -209,6 +265,19 @@ extension InformationViewController {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
+    }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let model = self.dataArray[indexPath.row] as! InfoModel
+        
+        let dCtrl = DetailViewController()
+        dCtrl.model = model
+        
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(dCtrl, animated: true)
+        self.hidesBottomBarWhenPushed = false
+        
     }
     
 }
