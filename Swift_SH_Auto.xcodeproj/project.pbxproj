@@ -889,7 +889,6 @@
 		4E0C41F01C1FC60700B75D43 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C41EE1C1FC60700B75D43 /* InfoCell.xib */; };
 		4E0C41F21C2025F800B75D43 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C41F11C2025F800B75D43 /* DetailViewController.swift */; };
 		4E18EDBB1C2EE6FB0079A1EA /* CollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDBA1C2EE6FB0079A1EA /* CollectViewController.swift */; };
-		4E18EDC51C2EEE810079A1EA /* Collect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDC31C2EEE810079A1EA /* Collect.xcdatamodeld */; };
 		4E18EDCE1C2EEEB70079A1EA /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDC91C2EEEB70079A1EA /* Const.swift */; };
 		4E18EDCF1C2EEEB70079A1EA /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDCA1C2EEEB70079A1EA /* DBManager.swift */; };
 		4E18EDD01C2EEEB70079A1EA /* MyDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDCB1C2EEEB70079A1EA /* MyDownloader.swift */; };
@@ -1830,7 +1829,6 @@
 		4E0C41EE1C1FC60700B75D43 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		4E0C41F11C2025F800B75D43 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4E18EDBA1C2EE6FB0079A1EA /* CollectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectViewController.swift; sourceTree = "<group>"; };
-		4E18EDC41C2EEE810079A1EA /* Collect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Collect.xcdatamodel; sourceTree = "<group>"; };
 		4E18EDC91C2EEEB70079A1EA /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		4E18EDCA1C2EEEB70079A1EA /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		4E18EDCB1C2EEEB70079A1EA /* MyDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDownloader.swift; sourceTree = "<group>"; };
@@ -1927,7 +1925,6 @@
 				4E0C3AE41C1FBFFC00B75D43 /* Assets.xcassets */,
 				4E0C3AE61C1FBFFC00B75D43 /* LaunchScreen.storyboard */,
 				4E0C3AE91C1FBFFC00B75D43 /* Info.plist */,
-				4E18EDC31C2EEE810079A1EA /* Collect.xcdatamodeld */,
 			);
 			path = Swift_SH_Auto;
 			sourceTree = "<group>";
@@ -4021,7 +4018,6 @@
 				4E92A65A1C20556D008791F0 /* XWRefreshHeader.swift in Sources */,
 				4E92A65D1C20556D008791F0 /* UIScrollViewExtension-XW.swift in Sources */,
 				4E92A6501C20556D008791F0 /* UIImage+Extension.swift in Sources */,
-				4E18EDC51C2EEE810079A1EA /* Collect.xcdatamodeld in Sources */,
 				4E0C3B141C1FC1D200B75D43 /* BaseViewController.swift in Sources */,
 				4E0C41E61C1FC25600B75D43 /* IndulgenceViewController.swift in Sources */,
 				4E92A6601C205B4B008791F0 /* InfoModel.swift in Sources */,
@@ -4281,20 +4277,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4E18EDC31C2EEE810079A1EA /* Collect.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4E18EDC41C2EEE810079A1EA /* Collect.xcdatamodel */,
-			);
-			currentVersion = 4E18EDC41C2EEE810079A1EA /* Collect.xcdatamodel */;
-			name = Collect.xcdatamodeld;
-			path = util/Collect.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4E0C3AD21C1FBFFC00B75D43 /* Project object */;
 }
