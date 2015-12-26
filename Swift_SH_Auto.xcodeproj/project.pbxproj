@@ -888,11 +888,14 @@
 		4E0C41EF1C1FC60700B75D43 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C41ED1C1FC60700B75D43 /* InfoCell.swift */; };
 		4E0C41F01C1FC60700B75D43 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C41EE1C1FC60700B75D43 /* InfoCell.xib */; };
 		4E0C41F21C2025F800B75D43 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C41F11C2025F800B75D43 /* DetailViewController.swift */; };
+		4E18EDBB1C2EE6FB0079A1EA /* CollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDBA1C2EE6FB0079A1EA /* CollectViewController.swift */; };
+		4E18EDC51C2EEE810079A1EA /* Collect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDC31C2EEE810079A1EA /* Collect.xcdatamodeld */; };
+		4E18EDCE1C2EEEB70079A1EA /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDC91C2EEEB70079A1EA /* Const.swift */; };
+		4E18EDCF1C2EEEB70079A1EA /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDCA1C2EEEB70079A1EA /* DBManager.swift */; };
+		4E18EDD01C2EEEB70079A1EA /* MyDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDCB1C2EEEB70079A1EA /* MyDownloader.swift */; };
+		4E18EDD11C2EEEB70079A1EA /* MyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18EDCC1C2EEEB70079A1EA /* MyUtil.swift */; };
 		4E8255EA1C2242C0006EDFF9 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8255E91C2242C0006EDFF9 /* DetailModel.swift */; };
 		4E8255EC1C224562006EDFF9 /* InfoHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8255EB1C224562006EDFF9 /* InfoHeadView.swift */; };
-		4E92A6221C205508008791F0 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92A61F1C205508008791F0 /* Const.swift */; };
-		4E92A6231C205508008791F0 /* MyDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92A6201C205508008791F0 /* MyDownloader.swift */; };
-		4E92A6241C205508008791F0 /* MyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92A6211C205508008791F0 /* MyUtil.swift */; };
 		4E92A6461C20556D008791F0 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92A6261C20556D008791F0 /* ImageCache.swift */; };
 		4E92A6471C20556D008791F0 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92A6271C20556D008791F0 /* ImageDownloader.swift */; };
 		4E92A6481C20556D008791F0 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92A6281C20556D008791F0 /* ImageTransition.swift */; };
@@ -1826,11 +1829,14 @@
 		4E0C41ED1C1FC60700B75D43 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		4E0C41EE1C1FC60700B75D43 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		4E0C41F11C2025F800B75D43 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4E18EDBA1C2EE6FB0079A1EA /* CollectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectViewController.swift; sourceTree = "<group>"; };
+		4E18EDC41C2EEE810079A1EA /* Collect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Collect.xcdatamodel; sourceTree = "<group>"; };
+		4E18EDC91C2EEEB70079A1EA /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		4E18EDCA1C2EEEB70079A1EA /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		4E18EDCB1C2EEEB70079A1EA /* MyDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDownloader.swift; sourceTree = "<group>"; };
+		4E18EDCC1C2EEEB70079A1EA /* MyUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtil.swift; sourceTree = "<group>"; };
 		4E8255E91C2242C0006EDFF9 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		4E8255EB1C224562006EDFF9 /* InfoHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoHeadView.swift; sourceTree = "<group>"; };
-		4E92A61F1C205508008791F0 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		4E92A6201C205508008791F0 /* MyDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDownloader.swift; sourceTree = "<group>"; };
-		4E92A6211C205508008791F0 /* MyUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtil.swift; sourceTree = "<group>"; };
 		4E92A6261C20556D008791F0 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		4E92A6271C20556D008791F0 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		4E92A6281C20556D008791F0 /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
@@ -1908,12 +1914,12 @@
 		4E0C3ADC1C1FBFFC00B75D43 /* Swift_SH_Auto */ = {
 			isa = PBXGroup;
 			children = (
+				4E18EDC61C2EEEB70079A1EA /* util */,
 				4E0C3B151C1FC22000B75D43 /* images */,
 				4E0C3B0D1C1FC1C000B75D43 /* controller */,
 				4E0C3B0E1C1FC1C000B75D43 /* framework */,
 				4E0C3B0F1C1FC1C000B75D43 /* model */,
 				4E0C3B101C1FC1C000B75D43 /* thridParty */,
-				4E0C3B111C1FC1C000B75D43 /* util */,
 				4E0C3B121C1FC1C000B75D43 /* view */,
 				4E0C3ADD1C1FBFFC00B75D43 /* AppDelegate.swift */,
 				4E0C3ADF1C1FBFFC00B75D43 /* ViewController.swift */,
@@ -1921,6 +1927,7 @@
 				4E0C3AE41C1FBFFC00B75D43 /* Assets.xcassets */,
 				4E0C3AE61C1FBFFC00B75D43 /* LaunchScreen.storyboard */,
 				4E0C3AE91C1FBFFC00B75D43 /* Info.plist */,
+				4E18EDC31C2EEE810079A1EA /* Collect.xcdatamodeld */,
 			);
 			path = Swift_SH_Auto;
 			sourceTree = "<group>";
@@ -1954,6 +1961,7 @@
 				4E0C41E91C1FC26F00B75D43 /* MineViewController.swift */,
 				4E0C41EB1C1FC29400B75D43 /* MainTabBarController.swift */,
 				4E0C41F11C2025F800B75D43 /* DetailViewController.swift */,
+				4E18EDBA1C2EE6FB0079A1EA /* CollectViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1981,16 +1989,6 @@
 				4E92A6331C20556D008791F0 /* XWSwiftRefresh */,
 			);
 			path = thridParty;
-			sourceTree = "<group>";
-		};
-		4E0C3B111C1FC1C000B75D43 /* util */ = {
-			isa = PBXGroup;
-			children = (
-				4E92A61F1C205508008791F0 /* Const.swift */,
-				4E92A6201C205508008791F0 /* MyDownloader.swift */,
-				4E92A6211C205508008791F0 /* MyUtil.swift */,
-			);
-			path = util;
 			sourceTree = "<group>";
 		};
 		4E0C3B121C1FC1C000B75D43 /* view */ = {
@@ -2904,6 +2902,17 @@
 				4E0C3E7D1C1FC22200B75D43 /* tabbar@2x.png */,
 			);
 			path = tab;
+			sourceTree = "<group>";
+		};
+		4E18EDC61C2EEEB70079A1EA /* util */ = {
+			isa = PBXGroup;
+			children = (
+				4E18EDC91C2EEEB70079A1EA /* Const.swift */,
+				4E18EDCA1C2EEEB70079A1EA /* DBManager.swift */,
+				4E18EDCB1C2EEEB70079A1EA /* MyDownloader.swift */,
+				4E18EDCC1C2EEEB70079A1EA /* MyUtil.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		4E92A6251C20556D008791F0 /* Kingfisher */ = {
@@ -3988,8 +3997,8 @@
 				4E8255EC1C224562006EDFF9 /* InfoHeadView.swift in Sources */,
 				4E0C41F21C2025F800B75D43 /* DetailViewController.swift in Sources */,
 				4E92A6471C20556D008791F0 /* ImageDownloader.swift in Sources */,
-				4E92A6241C205508008791F0 /* MyUtil.swift in Sources */,
 				4E92A64E1C20556D008791F0 /* ThreadHelper.swift in Sources */,
+				4E18EDCF1C2EEEB70079A1EA /* DBManager.swift in Sources */,
 				4E0C41E41C1FC24800B75D43 /* SearchViewController.swift in Sources */,
 				4E92A6551C20556D008791F0 /* XWRefreshAutoFooter.swift in Sources */,
 				4E0C3AE01C1FBFFC00B75D43 /* ViewController.swift in Sources */,
@@ -4002,16 +4011,17 @@
 				4E92A6491C20556D008791F0 /* KingfisherManager.swift in Sources */,
 				4E8255EA1C2242C0006EDFF9 /* DetailModel.swift in Sources */,
 				4E0C3ADE1C1FBFFC00B75D43 /* AppDelegate.swift in Sources */,
-				4E92A6221C205508008791F0 /* Const.swift in Sources */,
 				4E0C41EA1C1FC26F00B75D43 /* MineViewController.swift in Sources */,
+				4E18EDD11C2EEEB70079A1EA /* MyUtil.swift in Sources */,
 				4E92A64D1C20556D008791F0 /* String+MD5.swift in Sources */,
 				4E92A6531C20556D008791F0 /* XWRefreshComponent.swift in Sources */,
+				4E18EDD01C2EEEB70079A1EA /* MyDownloader.swift in Sources */,
 				4E92A64B1C20556D008791F0 /* KingfisherOptionsInfo.swift in Sources */,
 				4E92A6561C20556D008791F0 /* XWRefreshAutoNormalFooter.swift in Sources */,
 				4E92A65A1C20556D008791F0 /* XWRefreshHeader.swift in Sources */,
 				4E92A65D1C20556D008791F0 /* UIScrollViewExtension-XW.swift in Sources */,
-				4E92A6231C205508008791F0 /* MyDownloader.swift in Sources */,
 				4E92A6501C20556D008791F0 /* UIImage+Extension.swift in Sources */,
+				4E18EDC51C2EEE810079A1EA /* Collect.xcdatamodeld in Sources */,
 				4E0C3B141C1FC1D200B75D43 /* BaseViewController.swift in Sources */,
 				4E0C41E61C1FC25600B75D43 /* IndulgenceViewController.swift in Sources */,
 				4E92A6601C205B4B008791F0 /* InfoModel.swift in Sources */,
@@ -4024,6 +4034,8 @@
 				4E92A6481C20556D008791F0 /* ImageTransition.swift in Sources */,
 				4E92A6591C20556D008791F0 /* XWRefreshGifHeader.swift in Sources */,
 				4E92A6541C20556D008791F0 /* XWShortcutMethod.swift in Sources */,
+				4E18EDBB1C2EE6FB0079A1EA /* CollectViewController.swift in Sources */,
+				4E18EDCE1C2EEEB70079A1EA /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4269,6 +4281,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4E18EDC31C2EEE810079A1EA /* Collect.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4E18EDC41C2EEE810079A1EA /* Collect.xcdatamodel */,
+			);
+			currentVersion = 4E18EDC41C2EEE810079A1EA /* Collect.xcdatamodel */;
+			name = Collect.xcdatamodeld;
+			path = util/Collect.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4E0C3AD21C1FBFFC00B75D43 /* Project object */;
 }

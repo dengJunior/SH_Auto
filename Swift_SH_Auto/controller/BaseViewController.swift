@@ -34,10 +34,10 @@ class BaseViewController: UIViewController {
     
     
     //导航按钮
-    func addNavBtn(bgImageName:String,isLeft:Bool,target:AnyObject?,action:Selector) {
+    func addNavBtn(bgImageName:String,isLeft:Bool,target:AnyObject?,action:Selector) -> UIButton {
         
         let w = CGFloat(48)
-        let btn = MyUtil.createBtn(CGRectMake(0, 4, w, 36), bgImageName: bgImageName, selectBgImageName: nil, highlighBgImageName: nil, title: title, target: target, action: action)
+        let btn = MyUtil.createBtn(CGRectMake(0, 6, w, 32), bgImageName: bgImageName, selectBgImageName: nil, highlighBgImageName: nil, title: title, target: target, action: action)
         let barBtn = UIBarButtonItem(customView: btn)
         
         if isLeft {
@@ -46,6 +46,8 @@ class BaseViewController: UIViewController {
             self.navigationItem.rightBarButtonItem = barBtn
         }
         
+        
+        return btn
         
     }
     

@@ -21,13 +21,20 @@ class DetailViewController: BaseViewController, MyDownloaderDelegate {
     //webView
     var webView: UIWebView?
     
+    //收藏按钮
+    var collectBtn: UIButton?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        //标题
+        self.navigationItem.title = "详情"
         
+        //返回按钮
+        self.addNavBackBtn(self, action: "backAction")
         
         //用UIWebView显示数据
         self.webView = UIWebView(frame: CGRectMake(0,0,375,667))
@@ -48,32 +55,15 @@ class DetailViewController: BaseViewController, MyDownloaderDelegate {
         
         
         //显示加载精度条
-        self.showActivity()
+        MyUtil.showActivityOnView(self.view)
         
         
     }
     
     
-    func showActivity() {
-    
-        
-        
-        let activityView = UIActivityIndicatorView(frame: CGRectMake(160, 200, (kScreenW-80*2)/2, 100))
-        activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
-        activityView.backgroundColor = UIColor.grayColor()
-        activityView.startAnimating()
-        activityView.tag = 314
-        self.view.addSubview(activityView)
-        
-        
-    }
-    
-    func hideActivity () {
-        
-        let activityView = self.view.viewWithTag(314) as! UIActivityIndicatorView
-        activityView.stopAnimating()
-        
-        
+    //返回按钮
+    func backAction() -> Void {
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     
@@ -86,8 +76,50 @@ class DetailViewController: BaseViewController, MyDownloaderDelegate {
         
         self.webView?.loadRequest(request)
         
+        //显示收藏按钮
+        self.collectBtn = self.addNavBtn("new_collectBtn_normal", isLeft: false, target: self, action: "collectAction")
+        
+        //看看是否已经收藏
+        let flag = DBManager.sharedManager().isInfoCollect(self.model!.id)
+        if flag == false {
+ 
+            self.collectBtn?.setBackgroundImage(UIImage(named: "new_collectBtn_normal"), forState: UIControlState.Normal)
+        }else{
+
+            self.collectBtn?.setBackgroundImage(UIImage(named: "new_collect_selected"), forState: UIControlState.Normal)
+        }
+
+        
         //隐藏加载精度条
-        self.hideActivity()
+        MyUtil.hideActivityOnView(self.view)
+        
+    }
+    
+    //收藏
+    func collectAction() {
+        
+        //看看是否已经收藏
+        let flag = DBManager.sharedManager().isInfoCollect(self.model!.id)
+        
+        if flag {
+            //取消收藏
+            DBManager.sharedManager().deleteModel((self.model?.id)!)
+            
+            self.collectBtn?.setBackgroundImage(UIImage(named: "new_collectBtn_normal"), forState: UIControlState.Normal)
+        }else{
+            //收藏
+            var dict = Dictionary<String,AnyObject?>()
+            dict[kInfoId] = self.model?.id
+            dict[kHeadImageUrl] = self.model?.header_img_url
+            dict[kTitle] = self.detailModel?.title
+            dict[kDate] = self.model?.createTime
+            dict[kCommentCount] = self.model?.commentCount
+            
+            DBManager.sharedManager().addCollect(dict)
+            
+            self.collectBtn?.setBackgroundImage(UIImage(named: "new_collect_selected"), forState: UIControlState.Normal)
+        }
+        
         
     }
 
@@ -140,6 +172,9 @@ extension DetailViewController {
                 self.performSelectorOnMainThread("refreshWebView", withObject: nil, waitUntilDone: false)
                 
             }
+            
+            
+            
             
             
         }

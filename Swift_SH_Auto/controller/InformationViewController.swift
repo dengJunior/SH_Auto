@@ -29,7 +29,11 @@ class InformationViewController: BaseViewController ,UITableViewDelegate, UITabl
     //标题视图
     var infoTitleView: InfoHeadView?
     
-    var titleStr: String?
+    var titleStr: String? {
+        didSet{
+            self.navigationItem.title = titleStr
+        }
+    }
     
 
     override func viewDidLoad() {
@@ -91,6 +95,9 @@ class InformationViewController: BaseViewController ,UITableViewDelegate, UITabl
     
     //下载列表
     func downloadListData() -> Void {
+        
+        //显示加载进度条
+        MyUtil.showActivityOnView(self.view)
         
         //拼接链接
         var urlString = String(format: kInfoListUrl, arguments: [self.newsType])
@@ -186,10 +193,16 @@ extension InformationViewController {
 extension InformationViewController {
     
     func downloadFail(downloader: MyDownloader, error: NSError) {
+        MyUtil.hideActivityOnView(self.view)
         print(error)
     }
     
     func downloadFinish(downloader: MyDownloader) {
+        
+        
+        if self.lastId.isEmpty {
+            self.dataArray.removeAllObjects()
+        }
         
         //数据解析
         let result = try! NSJSONSerialization.JSONObjectWithData(downloader.receiveData!, options: NSJSONReadingOptions.MutableContainers)
@@ -233,6 +246,9 @@ extension InformationViewController {
         
         self.tbView?.headerView?.endRefreshing()
         self.tbView?.footerView?.endRefreshing()
+        
+        //隐藏加载进度条
+        MyUtil.hideActivityOnView(self.view)
         
     }
     

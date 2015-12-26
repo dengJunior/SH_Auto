@@ -20,6 +20,8 @@ class MyUtil: NSObject {
         label.textAlignment = textAlignment
         label.font = font
         label.textColor = textColor
+        
+        
         return label
     }
     
@@ -66,58 +68,23 @@ class MyUtil: NSObject {
     }
     
     
-    
-    //类型转换成文字
-    class func transferCateName(name: String) -> String? {
-        if name == "Business" {
-            return "商业"
-        }else if name == "Weather" {
-            return "天气"
-        }else if name == "Tool" {
-            return "工具"
-        }else if name == "Travel" {
-            return "旅行"
-        }else if name == "Sports" {
-            return "体育"
-        }else if name == "Social" {
-            return "社交"
-        }else if name == "Refer" {
-            return "参考"
-        }else if name == "Ability" {
-            return "效率"
-        }else if name == "Photography" {
-            return "摄影"
-        }else if name == "News" {
-            return "新闻"
-        }else if name == "Gps" {
-            return "导航"
-        }else if name == "Music" {
-            return "音乐"
-        }else if name == "Life" {
-            return "生活"
-        }else if name == "Health" {
-            return "健康"
-        }else if name == "Finance" {
-            return "财务"
-        }else if name == "Pastime" {
-            return "娱乐"
-        }else if name == "Education" {
-            return "教育"
-        }else if name == "Book" {
-            return "书籍"
-        }else if name == "Medical" {
-            return "医疗"
-        }else if name == "Catalogs" {
-            return "商品指南"
-        }else if name == "FoodDrink" {
-            return "美食"
-        }else if name == "Game" {
-            return "游戏"
-        }else if name == "All" {
-            return "全部"
-        }
+    //显示加载进度条
+    class func showActivityOnView(superView: UIView){
         
-        return nil
+            let activityView = UIActivityIndicatorView(frame: CGRectMake(120, 200, kScreenW-120*2, 100))
+            activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+            activityView.backgroundColor = UIColor.grayColor()
+            activityView.startAnimating()
+            activityView.tag = 314
+            activityView.layer.cornerRadius = 10
+            superView.addSubview(activityView)
+    }
+    
+    //隐藏加载进度条
+    class func hideActivityOnView(superView: UIView)-> Void {
+        let activityView = superView.viewWithTag(314) as! UIActivityIndicatorView
+        activityView.stopAnimating()
+        activityView.removeFromSuperview()
     }
 
     
