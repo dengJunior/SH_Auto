@@ -36,7 +36,7 @@ class BaseViewController: UIViewController {
     //导航按钮
     func addNavBtn(bgImageName:String,isLeft:Bool,target:AnyObject?,action:Selector) -> UIButton {
         
-        let w = CGFloat(48)
+        let w = CGFloat(32)
         let btn = MyUtil.createBtn(CGRectMake(0, 6, w, 32), bgImageName: bgImageName, selectBgImageName: nil, highlighBgImageName: nil, title: title, target: target, action: action)
         let barBtn = UIBarButtonItem(customView: btn)
         

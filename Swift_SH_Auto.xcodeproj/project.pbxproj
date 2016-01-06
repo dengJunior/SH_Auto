@@ -924,6 +924,8 @@
 		4E92A65D1C20556D008791F0 /* UIScrollViewExtension-XW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92A6431C20556D008791F0 /* UIScrollViewExtension-XW.swift */; };
 		4E92A65E1C20556D008791F0 /* xw_icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E92A6451C20556D008791F0 /* xw_icon.bundle */; };
 		4E92A6601C205B4B008791F0 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E92A65F1C205B4B008791F0 /* InfoModel.swift */; };
+		4EC5AA761C3D16E000D66344 /* CollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5AA741C3D16E000D66344 /* CollectCell.swift */; };
+		4EC5AA771C3D16E000D66344 /* CollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC5AA751C3D16E000D66344 /* CollectCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1868,6 +1870,8 @@
 		4E92A6431C20556D008791F0 /* UIScrollViewExtension-XW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollViewExtension-XW.swift"; sourceTree = "<group>"; };
 		4E92A6451C20556D008791F0 /* xw_icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = xw_icon.bundle; sourceTree = "<group>"; };
 		4E92A65F1C205B4B008791F0 /* InfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		4EC5AA741C3D16E000D66344 /* CollectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectCell.swift; sourceTree = "<group>"; };
+		4EC5AA751C3D16E000D66344 /* CollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2002,6 +2006,8 @@
 				4E0C41ED1C1FC60700B75D43 /* InfoCell.swift */,
 				4E0C41EE1C1FC60700B75D43 /* InfoCell.xib */,
 				4E8255EB1C224562006EDFF9 /* InfoHeadView.swift */,
+				4EC5AA741C3D16E000D66344 /* CollectCell.swift */,
+				4EC5AA751C3D16E000D66344 /* CollectCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -3369,6 +3375,7 @@
 				4E0C419B1C1FC22200B75D43 /* submit_pressed.png in Resources */,
 				4E0C415D1C1FC22200B75D43 /* saler_Exchange_H.png in Resources */,
 				4E0C40AB1C1FC22200B75D43 /* mymore.png in Resources */,
+				4EC5AA771C3D16E000D66344 /* CollectCell.xib in Resources */,
 				4E0C413E1C1FC22200B75D43 /* readOrder_H@2x.png in Resources */,
 				4E0C40ED1C1FC22200B75D43 /* picture_bottombar_right.png in Resources */,
 				4E0C3FA11C1FC22200B75D43 /* FA_58.gif in Resources */,
@@ -4025,6 +4032,7 @@
 				4E92A6531C20556D008791F0 /* XWRefreshComponent.swift in Sources */,
 				4E18EDD01C2EEEB70079A1EA /* MyDownloader.swift in Sources */,
 				4E92A64B1C20556D008791F0 /* KingfisherOptionsInfo.swift in Sources */,
+				4EC5AA761C3D16E000D66344 /* CollectCell.swift in Sources */,
 				4E92A6561C20556D008791F0 /* XWRefreshAutoNormalFooter.swift in Sources */,
 				4E92A65A1C20556D008791F0 /* XWRefreshHeader.swift in Sources */,
 				4E92A65D1C20556D008791F0 /* UIScrollViewExtension-XW.swift in Sources */,
