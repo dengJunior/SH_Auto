@@ -123,7 +123,7 @@ class DetailViewController: BaseViewController, MyDownloaderDelegate {
             }else{
                 //收藏
                 
-                var dict = Dictionary<String,AnyObject?>()
+                var dict = Dictionary<String,AnyObject>()
                 dict[kInfoId] = tmpModel.id
                 dict[kHeadImageUrl] = tmpModel.header_img_url
                 dict[kTitle] = tmpModel.title

@@ -71,7 +71,7 @@ class DBManager: NSObject {
     }
     
     //收藏
-    func addCollect(dict: Dictionary<String,AnyObject?>) {
+    func addCollect(dict: Dictionary<String,AnyObject>) {
         
         
         
