@@ -47,7 +47,7 @@ class CollectViewController: BaseViewController,UITableViewDelegate, UITableView
         
         self.automaticallyAdjustsScrollViewInsets = false
         
-        self.tbView = UITableView(frame: CGRectMake(0, 64, 375, 667-64), style: UITableViewStyle.Plain)
+        self.tbView = UITableView(frame: CGRectMake(0, 64, 375, 667-64-49), style: UITableViewStyle.Plain)
         self.tbView?.delegate = self
         self.tbView?.dataSource = self
         self.view.addSubview(self.tbView!)

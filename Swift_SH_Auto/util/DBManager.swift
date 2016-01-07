@@ -57,8 +57,8 @@ class DBManager: NSObject {
         let request = NSFetchRequest()
         request.entity = entity
         
-        //设置查询条件
-        let predict = NSPredicate(format: "infoId==%@", infoId)
+        //设置查询条件        
+        let predict = NSPredicate(format: "infoId == %@", infoId)
         request.predicate = predict
         
         let results = try! self.ctx?.executeFetchRequest(request)
@@ -73,24 +73,34 @@ class DBManager: NSObject {
     //收藏
     func addCollect(dict: Dictionary<String,AnyObject?>) {
         
-        let entity = NSEntityDescription.insertNewObjectForEntityForName("CollectModel", inManagedObjectContext: self.ctx!) as? CollectModel
+        
+        
+        //判断是否已经收藏
+        
+        let ret = self.isInfoCollect((dict[kInfoId] as? NSNumber)!)
+        if ret == true {
+            return
+        }
+        
+        
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("CollectModel", inManagedObjectContext: self.ctx!) as! CollectModel
         if (dict.keys.contains(kCId)) {
-            entity?.cId = dict[kCId] as? NSNumber
+            entity.cId = dict[kCId] as? NSNumber
         }
         if (dict.keys.contains(kInfoId)) {
-            entity?.infoId = dict[kInfoId] as? NSNumber
+            entity.infoId = dict[kInfoId] as? NSNumber
         }
         if (dict.keys.contains(kHeadImageUrl)) {
-            entity?.headImageUrl = dict[kHeadImageUrl] as? String
+            entity.headImageUrl = dict[kHeadImageUrl] as? String
         }
         if (dict.keys.contains(kTitle)) {
-            entity?.title = dict[kTitle] as? String
+            entity.title = dict[kTitle] as? String
         }
         if (dict.keys.contains(kDate)) {
-            entity?.date = dict[kDate] as? String
+            entity.date = dict[kDate] as? String
         }
         if (dict.keys.contains(kCommentCount)) {
-            entity?.commentCount = dict[kCommentCount] as? NSNumber
+            entity.commentCount = dict[kCommentCount] as? NSNumber
         }
         
         //保存
@@ -107,7 +117,7 @@ class DBManager: NSObject {
         request.entity = entity
         
         //设置查询条件
-        let predict = NSPredicate(format: "infoId==%@", infoId)
+        let predict = NSPredicate(format: "infoId == %@", infoId)
         request.predicate = predict
         
         let results = try! self.ctx?.executeFetchRequest(request)
@@ -136,9 +146,9 @@ class DBManager: NSObject {
         
         
         //查询结果
-        let results = try! self.ctx?.executeFetchRequest(request)
+        let results = try! self.ctx?.executeFetchRequest(request) as! [CollectModel]
         
-        return results as? [CollectModel]
+        return results
     }
     
 

@@ -13,7 +13,7 @@ class DetailViewController: BaseViewController, MyDownloaderDelegate {
     
     
     //传过来的模型对象
-    var model: InfoModel?
+    var model: InfoModel!
     
     //下载回来的数据
     var detailModel: DetailModel?
@@ -60,6 +60,27 @@ class DetailViewController: BaseViewController, MyDownloaderDelegate {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        //显示收藏按钮
+        self.collectBtn = self.addNavBtn("new_collectBtn_normal", isLeft: false, target: self, action: "collectAction")
+        
+        //看看是否已经收藏
+        if let tmpModel = self.model {
+            let flag = DBManager.sharedManager().isInfoCollect(tmpModel.id)
+            
+            if flag {
+                self.collectBtn?.setBackgroundImage(UIImage(named: "new_collect_selected"), forState: UIControlState.Normal)
+            }else{
+                self.collectBtn?.setBackgroundImage(UIImage(named: "new_collectBtn_normal"), forState: UIControlState.Normal)
+            }
+        }
+        
+        
+        
+    }
+    
     
     //返回按钮
     func backAction() -> Void {
@@ -76,18 +97,7 @@ class DetailViewController: BaseViewController, MyDownloaderDelegate {
         
         self.webView?.loadRequest(request)
         
-        //显示收藏按钮
-        self.collectBtn = self.addNavBtn("new_collectBtn_normal", isLeft: false, target: self, action: "collectAction")
         
-        //看看是否已经收藏
-        let flag = DBManager.sharedManager().isInfoCollect(self.model!.id)
-        if flag == false {
- 
-            self.collectBtn?.setBackgroundImage(UIImage(named: "new_collectBtn_normal"), forState: UIControlState.Normal)
-        }else{
-
-            self.collectBtn?.setBackgroundImage(UIImage(named: "new_collect_selected"), forState: UIControlState.Normal)
-        }
 
         
         //隐藏加载精度条
@@ -98,27 +108,37 @@ class DetailViewController: BaseViewController, MyDownloaderDelegate {
     //收藏
     func collectAction() {
         
+        //判断是否收藏过
         //看看是否已经收藏
-        let flag = DBManager.sharedManager().isInfoCollect(self.model!.id)
-        
-        if flag {
-            //取消收藏
-            DBManager.sharedManager().deleteModel((self.model?.id)!)
+        if let tmpModel = self.model {
             
-            self.collectBtn?.setBackgroundImage(UIImage(named: "new_collectBtn_normal"), forState: UIControlState.Normal)
-        }else{
-            //收藏
-            var dict = Dictionary<String,AnyObject?>()
-            dict[kInfoId] = self.model?.id
-            dict[kHeadImageUrl] = self.model?.header_img_url
-            dict[kTitle] = self.detailModel?.title
-            dict[kDate] = self.model?.createTime
-            dict[kCommentCount] = self.model?.commentCount
+            let flag = DBManager.sharedManager().isInfoCollect(tmpModel.id)
             
-            DBManager.sharedManager().addCollect(dict)
             
-            self.collectBtn?.setBackgroundImage(UIImage(named: "new_collect_selected"), forState: UIControlState.Normal)
+            if flag {
+                //取消收藏
+                DBManager.sharedManager().deleteModel(tmpModel.id)
+                
+                self.collectBtn?.setBackgroundImage(UIImage(named: "new_collectBtn_normal"), forState: UIControlState.Normal)
+            }else{
+                //收藏
+                
+                var dict = Dictionary<String,AnyObject?>()
+                dict[kInfoId] = tmpModel.id
+                dict[kHeadImageUrl] = tmpModel.header_img_url
+                dict[kTitle] = tmpModel.title
+                dict[kDate] = tmpModel.createTime
+                dict[kCommentCount] = tmpModel.commentCount
+                
+                DBManager.sharedManager().addCollect(dict)
+                
+                self.collectBtn?.setBackgroundImage(UIImage(named: "new_collect_selected"), forState: UIControlState.Normal)
+            }
+            
+            
         }
+        
+        
         
         
     }
